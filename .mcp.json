@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "memorable": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/bin/memorable",
+      "args": ["mcp"]
+    }
+  }
+}

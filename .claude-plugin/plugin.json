@@ -1,0 +1,8 @@
+{
+  "name": "memorable",
+  "version": "0.1.0",
+  "description": "Procedural memory for Cowork. Records how a task was actually done and replays that procedure the next time a similar one arrives.",
+  "author": { "name": "Memorable", "url": "https://memorable.sh" },
+  "homepage": "https://www.memorable.sh/docs",
+  "keywords": ["memory", "procedural-memory", "recall", "workflow"]
+}

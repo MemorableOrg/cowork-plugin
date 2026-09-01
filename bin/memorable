@@ -1,0 +1,15 @@
+#!/bin/sh
+# Resolve the memorable CLI without depending on PATH.
+#
+# Cowork runs as a GUI app, so the process PATH is the launchd default: no
+# /opt/homebrew/bin, no nvm shim, no ~/.local/bin. A hook written with the bare
+# name would find nothing and fail silently on every turn, which is the worst
+# shape a memory feature can fail in. Absolute candidates first, npx last.
+#
+# Exits 0 with no output when nothing resolves: a missing CLI must never break
+# somebody's turn.
+for c in "${MEMORABLE_BIN:-}" "$HOME/.memorable/bin/memorable" "$HOME/.local/bin/memorable" "$(command -v memorable 2>/dev/null || true)"; do
+  [ -n "$c" ] && [ -x "$c" ] && exec "$c" "$@"
+done
+if command -v npx >/dev/null 2>&1; then exec npx -y memorable-cli@latest "$@"; fi
+exit 0

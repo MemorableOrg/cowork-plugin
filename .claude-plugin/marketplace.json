@@ -1,0 +1,11 @@
+{
+  "name": "memorable",
+  "owner": { "name": "Memorable", "url": "https://memorable.sh" },
+  "plugins": [
+    {
+      "name": "memorable",
+      "source": "./",
+      "description": "Procedural memory: replay how a task was done instead of re-deriving it."
+    }
+  ]
+}
