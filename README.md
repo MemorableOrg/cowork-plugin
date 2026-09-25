@@ -26,7 +26,7 @@ memorable enable    # explicit consent; nothing is stored before this
 Then add this directory as a plugin marketplace and install from it:
 
 ```
-/plugin marketplace add /path/to/memorable-gbrain/packages/cowork-plugin
+/plugin marketplace add MemorableOrg/cowork-plugin
 /plugin install memorable@memorable
 ```
 
