@@ -30,6 +30,11 @@ Then add this directory as a plugin marketplace and install from it:
 /plugin install memorable@memorable
 ```
 
+## Context sources
+
+[Use Screenpipe context with Memorable](docs/screenpipe.md) to combine recorded
+desktop context with recalled procedures in a local Claude Code session.
+
 ## Why `bin/memorable` exists
 
 Cowork is a GUI app, so its process PATH is the launchd default: no `/opt/homebrew/bin`, no nvm shim, no `~/.local/bin`. A hook written with the bare name `memorable` would resolve to nothing and fail silently on every turn. The wrapper tries `$MEMORABLE_BIN`, then `~/.memorable/bin/memorable`, then `~/.local/bin/memorable`, then PATH, then `npx`, and exits 0 with no output if none of them resolve. A missing CLI never breaks somebody's turn.
